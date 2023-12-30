@@ -120,8 +120,6 @@ class BlockParser:
 
     regex = OrRegex({
         "typedef": rb"\b typedef \s",
-        "struct": rb"\b struct \s",
-        "enum": rb"\b enum \s",
         "union": rb"\b union \s",
         "openbrace": rb"{",
         "assignment": rb"\b = \b",
@@ -157,7 +155,7 @@ class BlockParser:
 
 
 BlockParser.statement_types = [BlockParser.regex.types[name] for name in [
-    "typedef", "struct", "enum", "union", "assignment",
+    "typedef", "union", "assignment",
 ]]
 
 
